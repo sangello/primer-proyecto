@@ -21,6 +21,10 @@ function App() {
       </header>
     </div>
   );
+  
+  
 }
+
+//const App = () => <h1>Hola mundo desde mi archivo App.js</h1>
 
 export default App;
