@@ -17,7 +17,7 @@ const Curso = () => (
                 </div>
                 </div>
                 <span className="small">Sebastian</span>
-                <span className="small">Martin</span>
+                <span className="small">Martines</span>
             </div>
             </div>
             <div class="s-main-center">
