@@ -3,6 +3,7 @@ import logo from './logo.svg';
 /**import './App.css';*/
 import "./Styles/Styles.scss";
 import Curso from './Curso'
+import CursoComponente_Propiedad from './CursoComponente_Propiedades'
 
 function App() {
   return (
@@ -41,11 +42,7 @@ function App() {
     </div>
     <div className="ed-grid m-grid-3">
       <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso />
+      <CursoComponente_Propiedad />
     </div>
     </>
   );
