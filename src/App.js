@@ -3,7 +3,9 @@ import logo from './logo.svg';
 /**import './App.css';*/
 import "./Styles/Styles.scss";
 import Curso from './Curso'
-import CursoComponente_Propiedad from './CursoComponente_Propiedades'
+import CursoComponente_Propiedad from './Componente_Propiedades'
+import CursoImprimiendo_Propiedades from './Imprimiendo_Propiedades'
+import CursoImprimiendo_Propiedades1 from './Imprimiendo_Propiedades1'
 
 function App() {
   return (
@@ -43,6 +45,17 @@ function App() {
     <div className="ed-grid m-grid-3">
       <Curso />
       <CursoComponente_Propiedad />
+      <CursoImprimiendo_Propiedades 
+        title="Nuevo Curso de React desde cero"
+        image="https://edteam-media.s3.amazonaws.com/specialities/original/56519662-7722-4e2e-958e-599a35ae4fb1.png"
+        price="15 usd" 
+      />
+      <CursoImprimiendo_Propiedades1 
+        title="Edicion Audiovisual"
+        image="https://edteam-media.s3.amazonaws.com/specialities/original/10322ac1-7b43-4e12-9000-0c28e04178d6.png"
+        price="30 usd" 
+      />
+
     </div>
     </>
   );

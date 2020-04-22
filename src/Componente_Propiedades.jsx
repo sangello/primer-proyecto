@@ -6,7 +6,7 @@ const curso = {
     "price":"50 usd"
 }
 
-const CursoComponente_Propiedad = () => (
+const Componente_Propiedades = () => (
     <article class="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src={curso.image} alt={curso.title}/>
@@ -20,4 +20,4 @@ const CursoComponente_Propiedad = () => (
     </article>
 )
 
-export default CursoComponente_Propiedad
+export default Componente_Propiedades
