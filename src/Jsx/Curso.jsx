@@ -32,7 +32,7 @@ const Curso = () => (
             </div>
             </div>
             <div className="s-main-center">
-            <a className="button--ghost-alert button--tiny" href="#">$ 20USD</a>
+            <a className="button--ghost-alert button--tiny" href="https://">$ 20USD</a>
             </div>
         </div>
     </article>

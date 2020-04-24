@@ -19,7 +19,7 @@ const PropTypesDefaultprops = ({title, image, price}) => (
         <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
             <h3 className="center">{title}</h3>
             <div className="s-main-center">
-                <a className="button--ghost-alert button--tiny" href="#">$ {price}</a>
+                <a className="button--ghost-alert button--tiny" href="https://">$ {price}</a>
             </div>
         </div>
     </article>
