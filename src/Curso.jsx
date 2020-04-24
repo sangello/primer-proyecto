@@ -3,7 +3,7 @@ const mayorDeEdad = edad => edad > 18
 const persona = {"nombre":"Sebastian", "apellido":"Angellotti", "edad":"15"}
 
 const Curso = () => (
-    <article class="card">
+    <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src="https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png" alt="Curso Go"/>
         </div>
@@ -31,8 +31,8 @@ const Curso = () => (
                  }</span>
             </div>
             </div>
-            <div class="s-main-center">
-            <a class="button--ghost-alert button--tiny" href="#">$ 20USD</a>
+            <div className="s-main-center">
+            <a className="button--ghost-alert button--tiny" href="#">$ 20USD</a>
             </div>
         </div>
     </article>
