@@ -56,8 +56,10 @@ function App() {
            )
       }
 
+    
+    </div>
+    <div className="l-section">
       <Formulario />
- 
     </div>
     </>
   );

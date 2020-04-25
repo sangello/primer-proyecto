@@ -9,8 +9,13 @@ const persona = {"nombre":"Sebastian", "apellido":"Angellotti", "edad":"15"}
 // 2) Comando para agregar dependencias
 /** npm add ed-grid adteam-style-guide node-sass
  * estoy agregando esas 3 dependencias todo junto en una linea
+ * 
 */
-
+// 3) Direcciones utiles
+/** https://ux.ed.team/
+ *  https://ed-grid.com/
+ * 
+*/
 const Curso = () => (
     <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">

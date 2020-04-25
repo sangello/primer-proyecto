@@ -10,8 +10,9 @@ class Formulario extends Component {
 
     render(){
         return (
+ 
 
-            <div className="ed-grid">
+            <div className="ed-grid m-grid-1">
                 <h1>Formulario</h1>
                 <div className="form__item">
                     <label>Nombre Completo</label>
@@ -22,7 +23,7 @@ class Formulario extends Component {
                     <input type="email" name="" id=""/>
                 </div>
                 <div className="form__item">
-                    <button className="button full" type="submit" value="Enviar"/>
+                    <button className="button full" type="submit" value="Enviar">Enviar</button>
                 </div>
             </div>
         )
