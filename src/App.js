@@ -8,6 +8,8 @@ import ImprimiendoPropiedades from './Jsx/ImprimiendoPropiedades'
 import ImprimiendoPropiedades1 from './Jsx/ImprimiendoPropiedades1'
 import PropTypesDefaultprops from './Jsx/PropTypesDefaultprops'
 import RecorriendoArrays from './Jsx/RecorriendoArrays';
+import Banner from './Jsx/Banner';
+import Formulario from './Jsx/Formulario';
 
 const Cursos = [
   { "title" : "Java Desde 0",
@@ -19,43 +21,15 @@ const Cursos = [
   { "title" : "GO Desde 0",
     "image" : "https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png",
     "price" :  "120 USD"} , 
+  { "title" : "SEO Desde 0",
+    "image" : "https://edteam-media.s3.amazonaws.com/courses/original/9828742f-4da6-426e-80c9-e5081cc7f7a9.png",
+    "price" :  "20 USD"} , 
 ]
 
 function App() {
   return (
-    /**
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit" <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-     */
     <>
-    <div>
-      <div className="main-banner img-container l-section" id="main-banner">
-      <div className="ed-grid lg-grid-6">
-        <div className="lg-cols-4 lg-x-2">
-          <img className="main-banner__img" src="tu-imagen.jpg" alt="imagen"/>
-          <div className="main-banner__data s-center">
-            <p className="t2 s-mb-0">Título del banner</p>
-            <p> Subtítulo del banner</p>
-            <a href="https://" className="button">Botón del banner</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+    <Banner />
     <div className="ed-grid m-grid-3">
       <Curso />
       <ComponentePresentacionales/>
@@ -81,6 +55,8 @@ function App() {
           c => <RecorriendoArrays title={c.titulo} image={c.image} price={c.price}/>  
            )
       }
+
+      <Formulario />
  
     </div>
     </>
