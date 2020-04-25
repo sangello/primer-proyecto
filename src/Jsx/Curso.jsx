@@ -2,6 +2,15 @@ import React from 'react'
 const mayorDeEdad = edad => edad > 18
 const persona = {"nombre":"Sebastian", "apellido":"Angellotti", "edad":"15"}
 
+// 1)
+/**
+ * Creacion del proyecto npx create-react-app primer-proyecto 
+ */
+// 2) Comando para agregar dependencias
+/** npm add ed-grid adteam-style-guide node-sass
+ * estoy agregando esas 3 dependencias todo junto en una linea
+*/
+
 const Curso = () => (
     <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
