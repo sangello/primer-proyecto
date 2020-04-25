@@ -13,6 +13,17 @@ class Formulario extends Component {
 
             <div className="ed-grid">
                 <h1>Formulario</h1>
+                <div className="form__item">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="" id=""/>
+                </div>
+                <div className="form__item">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="" id=""/>
+                </div>
+                <div className="form__item">
+                    <button className="button full" type="submit" value="Enviar"/>
+                </div>
             </div>
         )
     }
