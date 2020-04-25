@@ -11,6 +11,16 @@ class Formulario extends Component {
             nombre: "",
             correo: ""
         }
+
+        //bind: es para enlazar el metodo cambiarNombre con el this de esta clase para que pueda ser 
+        //utilizado
+        this.cambiarNombre = this.cambiarNombre.bind(this)
+    }
+
+    cambiarNombre (e) {
+        this.setState({
+            nombre: e.target.value
+        })
     }
 
     render(){
@@ -23,13 +33,14 @@ class Formulario extends Component {
                 <div className="ed-grid m-grid-2">
                     <div className="form__item">
                         <label>Nombre Completo</label>
+                        {/** 2da Forma de hacerlo*/ }
                         <input type="text"
-                            onChange={ e => this.setState({
-                            nombre: e.target.value
-                        })}/>
+                            onChange={this.cambiarNombre
+                        }/>
                     </div>
                     <div className="form__item">
                         <label>Correo electrónico</label>
+                        {/** 1da Forma de hacerlo*/ }
                         <input type="email"
                             onChange={ e => this.setState({
                             correo: e.target.value
