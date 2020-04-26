@@ -72,6 +72,16 @@ class Formulario extends Component {
 
     }
 
+    //4 -- Se ejecuta cuando el componente termino de actualizarse luego de haber pasado por 
+    // las etapas de 
+    //podemos acceder a la informacion y estado que tenian antes de actualizarse con las
+    // propiedades revProps y prevState
+    componentDidUpdate (prevProps, prevState){
+        console.log(prevProps)
+        console.log(prevState)
+        console.log("-----------------")
+}
+
 }
 
 export default Formulario

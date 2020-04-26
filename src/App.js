@@ -51,10 +51,9 @@ function App() {
       />
 
       {
-        Cursos.map ( 
-          c => <RecorriendoArrays title={c.titulo} image={c.image} price={c.price}/>  
-           )
+        Cursos.map ( (c , index) => <RecorriendoArrays key={index} titulo={c.titulo} image={c.image} price={c.price}/> )
       }
+);
 
     
     </div>
