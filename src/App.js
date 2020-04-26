@@ -61,7 +61,7 @@ function App() {
     <div className="l-section">
       {//  <Formulario nombre="Juan jose" correo="Juan@gmail.com"/>
       }
-      <Formulario />
+      <Formulario name="de Bienvenida"/>
     </div>
     </>
   );

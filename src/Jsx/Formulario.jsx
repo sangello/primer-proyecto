@@ -4,16 +4,19 @@ import React , {Component} from 'react'
 //Componente de Clase
 class Formulario extends Component {
 
+    //1 -- El Contructor es el Primer Metodo que se ejecuta
     constructor(props){
+        //Toda la logica que se quiere hacer antes de renderizar el componente se hace en el contructor.
         super(props)
 
+        //Inicializo el estado del objeto con el que voy a trabajar.
         this.state = {
             nombre: "",
             correo: ""
         }
 
-        //bind: es para enlazar el metodo cambiarNombre con el this de esta clase para que pueda ser 
-        //utilizado
+        //bind: es para enlazar el metodo cambiarNombre con el this 
+        //de esta clase para que pueda ser utilizado
         this.cambiarNombre = this.cambiarNombre.bind(this)
     }
 
@@ -23,13 +26,14 @@ class Formulario extends Component {
         })
     }
 
+    //2 -- El Render es el Segundo Metodo que se ejecuta --> Se renderiza
     render(){
         return (
  
 
         <div className="ed-grid">
-            <h1>Formulario</h1>
-            <form action="">
+            <h1>Formulario {this.props.name}</h1>
+            <form action=""  id="elemento">
                 <div className="ed-grid m-grid-2">
                     <div className="form__item">
                         <label>Nombre Completo</label>
@@ -46,6 +50,7 @@ class Formulario extends Component {
                             correo: e.target.value
                         })}/>
                     </div>
+                    
                     <div className="form__item">
                         <button className="button full" type="submit" value="Enviar">Enviar</button>
                     </div>
@@ -57,6 +62,14 @@ class Formulario extends Component {
             </div>
         </div>
         )
+    }
+
+    //3 -- El componentDidMount es el Tercer Metodo que se ejecuta. Ya estas seguro que el render
+    // esta en el DOM y ya puedo manipular los elementos.
+    componentDidMount (){
+        let elemento = document.getElementById("elemento")
+        console.log(elemento)
+
     }
 
 }
