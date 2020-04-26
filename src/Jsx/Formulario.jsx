@@ -12,17 +12,25 @@ class Formulario extends Component {
         //Inicializo el estado del objeto con el que voy a trabajar.
         this.state = {
             nombre: "",
-            correo: ""
+            correo: "",
+            fecha: new Date()
         }
 
         //bind: es para enlazar el metodo cambiarNombre con el this 
         //de esta clase para que pueda ser utilizado
         this.cambiarNombre = this.cambiarNombre.bind(this)
+        this.cambiarFecha = this.cambiarFecha.bind(this)
     }
 
     cambiarNombre (e) {
         this.setState({
             nombre: e.target.value
+        })
+    }
+
+    cambiarFecha (e) {
+        this.setState({
+            fecha: new Date()
         })
     }
 
@@ -33,6 +41,7 @@ class Formulario extends Component {
 
         <div className="ed-grid">
             <h1>Formulario {this.props.name}</h1>
+        <h4>Fecha Actual: {Math.ceil(this.state.fecha/1000)}</h4>
             <form action=""  id="elemento">
                 <div className="ed-grid m-grid-2">
                     <div className="form__item">
@@ -64,12 +73,22 @@ class Formulario extends Component {
         )
     }
 
-    //3 -- El componentDidMount es el Tercer Metodo que se ejecuta. Ya estas seguro que el render
+    //3 -- El componentDidMount (Componente montado) es el Tercer Metodo que se ejecuta. Ya estas seguro que el render
     // esta en el DOM y ya puedo manipular los elementos.
     componentDidMount (){
         let elemento = document.getElementById("elemento")
         console.log(elemento)
 
+        this.intervaloFecha = setInterval(() => {
+            this.cambiarFecha()
+            console.log(new Date())
+        }, 1000)
+    }
+
+    // 4- Se lo utiliza cuando se va a desmontar la página en navegacion entre pantallas
+    // Se debe limpiar intervalos, llamadas asincronas, verificaciones cada cierto tiempo
+    componentWillUnmount (){
+        clearInterval(this.intervaloFecha)
     }
 
     //4 -- Se ejecuta cuando el componente termino de actualizarse luego de haber pasado por 
@@ -80,7 +99,8 @@ class Formulario extends Component {
         console.log(prevProps)
         console.log(prevState)
         console.log("-----------------")
-}
+
+    }
 
 }
 

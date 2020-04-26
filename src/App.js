@@ -31,36 +31,32 @@ function App() {
     <>
     <Banner />
     <div className="ed-grid m-grid-3">
-      <Curso />
-      <ComponentePresentacionales/>
-      <ImprimiendoPropiedades 
-      //Componente presentacional - Se limita a mostrarse en la interfaz.
-        title="Nuevo Curso de React desde cero"
-        image="https://edteam-media.s3.amazonaws.com/specialities/original/56519662-7722-4e2e-958e-599a35ae4fb1.png"
-        price="15 usd" 
-      />
-      <ImprimiendoPropiedades1 
+        <Curso />
+        <ComponentePresentacionales/>
+        <ImprimiendoPropiedades 
         //Componente presentacional - Se limita a mostrarse en la interfaz.
-        title="Edicion Audiovisual"
-        image="https://edteam-media.s3.amazonaws.com/specialities/original/10322ac1-7b43-4e12-9000-0c28e04178d6.png"
-        price="30 usd" 
-      />
-     <PropTypesDefaultprops 
-        //Componente presentacional - Se limita a mostrarse en la interfaz.
-        price="30 usd" 
-      />
-
-      {
-        Cursos.map ( (c , index) => <RecorriendoArrays key={index} titulo={c.titulo} image={c.image} price={c.price}/> )
-      }
-);
-
-    
+          title="Nuevo Curso de React desde cero"
+          image="https://edteam-media.s3.amazonaws.com/specialities/original/56519662-7722-4e2e-958e-599a35ae4fb1.png"
+          price="15 usd" 
+        />
+        <ImprimiendoPropiedades1 
+          //Componente presentacional - Se limita a mostrarse en la interfaz.
+          title="Edicion Audiovisual"
+          image="https://edteam-media.s3.amazonaws.com/specialities/original/10322ac1-7b43-4e12-9000-0c28e04178d6.png"
+          price="30 usd" 
+        />
+      <PropTypesDefaultprops 
+          //Componente presentacional - Se limita a mostrarse en la interfaz.
+          price="30 usd" 
+        />
+        {
+          Cursos.map ( (c , index) => <RecorriendoArrays key={index} titulo={c.titulo} image={c.image} price={c.price}/> )
+        }
     </div>
     <div className="l-section">
-      {//  <Formulario nombre="Juan jose" correo="Juan@gmail.com"/>
-      }
-      <Formulario name="de Bienvenida"/>
+        {//  <Formulario nombre="Juan jose" correo="Juan@gmail.com"/>
+        }
+        <Formulario name="de Bienvenida"/>
     </div>
     </>
   );
