@@ -32,6 +32,15 @@ const App = () => (
            * 
            * ----------- Clase 5.6 - Parámetros de la ruta -------- 
            * propiedad math, toma todo lo que viene de la url
+           * 
+           *  ----------- Clase 5.7 - Componente Link -------- 
+           * (Ver Recorriendo Arrays) - Un ancla en HTML para redireccionar es con <a> pero recarga la 
+           * pagina. No es una single page aplication. Por eso 'react-router-dom' nos da una nuevo 
+           * componente que se llama link
+           * 
+           * <a href={`/cursos/${id}`}>
+           *     <img src={image} alt={title} />
+           * </a>
            */}
         <Switch>
           <Route path="/" exact  component={Banner}/>
@@ -39,7 +48,7 @@ const App = () => (
           <Route path="/cursos" exact  component={CourseGrid}/>
           <Route path="/formulario" exact  component={ () => <Formulario name="Pagina de contacto"/> } />
           <Route component = { () => (
-              <div className="ed-grid">
+              <div className="ed-grid">Q
                 <h1>Error 404</h1>
                 <span>Página no encontrada</span>
               </div>
