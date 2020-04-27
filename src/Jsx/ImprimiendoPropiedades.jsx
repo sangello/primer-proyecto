@@ -2,6 +2,7 @@ import React from 'react'
 
 const ImprimiendoPropiedades = props => (
     <article className="card">
+        <h3>ImprimiendoPropiedades</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src={props.image} alt={props.title}/>
         </div>

@@ -29,8 +29,9 @@ const Cursos = [
 const CourseGrid = () => (
 
     <div>
+        <h3 className="ed-grid m-grid-1 center">RecorriendoArrays - CourseGrid</h3>
         <div className="ed-grid m-grid-4">
-            {Cursos.map ( c  => (
+          {Cursos.map ( c  => (
                 <RecorriendoArrays 
                     key={c.id}
                     id={c.id}

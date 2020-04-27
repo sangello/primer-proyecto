@@ -8,6 +8,7 @@ const curso = {
 
 const ComponentePresentacionales = () => (
     <article className="card">
+        <h3>ComponentePresentacionales</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src={curso.image} alt={curso.title}/>
         </div>

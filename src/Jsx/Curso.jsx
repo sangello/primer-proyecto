@@ -2,22 +2,9 @@ import React from 'react'
 const mayorDeEdad = edad => edad > 18
 const persona = {"nombre":"Sebastian", "apellido":"Angellotti", "edad":"15"}
 
-// 1)
-/**
- * Creacion del proyecto npx create-react-app primer-proyecto 
- */
-// 2) Comando para agregar dependencias
-/** npm add ed-grid adteam-style-guide node-sass
- * estoy agregando esas 3 dependencias todo junto en una linea
- * 
-*/
-// 3) Direcciones utiles
-/** https://ux.ed.team/
- *  https://ed-grid.com/
- * 
-*/
 const Curso = () => (
     <article className="card">
+        <h3>Curso</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src="https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png" alt="Curso Go"/>
         </div>

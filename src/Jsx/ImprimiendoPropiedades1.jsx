@@ -4,6 +4,7 @@ import React from 'react'
 //{title,image,price} --> son las props
 const ImprimiendoPropiedades1 = ({title,image,price}) => (
     <article className="card">
+        <h3>ImprimiendoPropiedades1</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src={image} alt={title}/>
         </div>

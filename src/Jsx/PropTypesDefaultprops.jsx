@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 //{title,image,price} --> son las props
 const PropTypesDefaultprops = ({title, image, price}) => (
     <article className="card">
+        <h3>PropTypesDefaultprops</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
          { 
             /*

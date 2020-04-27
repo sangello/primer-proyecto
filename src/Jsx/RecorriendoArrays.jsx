@@ -2,6 +2,7 @@ import React from 'react'
 
 const RecorriendoArrays = ({title, image, price, profesor}) => (
     <article className="card">
+        <h3>RecorriendoArrays</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             <img src={image} alt={title} />
         </div>

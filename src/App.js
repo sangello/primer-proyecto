@@ -32,86 +32,135 @@ function App() {
     <>
     <Banner />
     <div className="ed-grid m-grid-3">
-        <Curso />
- 
-    {/** ----------- Clase 3.4 -------- */ }  
-        <ImprimiendoPropiedades 
-        //Componente presentacional - Se limita a mostrarse en la interfaz.
-          title="Nuevo Curso de React desde cero"
-          image="https://edteam-media.s3.amazonaws.com/specialities/original/56519662-7722-4e2e-958e-599a35ae4fb1.png"
-          price="15 usd" 
-        />
-        <ImprimiendoPropiedades1 
-          //Componente presentacional - Se limita a mostrarse en la interfaz.
-          title="Edicion Audiovisual"
-          image="https://edteam-media.s3.amazonaws.com/specialities/original/10322ac1-7b43-4e12-9000-0c28e04178d6.png"
-          price="30 usd" 
-        />
-    {/** ----------- Clase 3.5 -------- */ }    
-        <ComponentePresentacionales/>
 
-    {/** ----------- Clase 3.6 -------- */ }
-        <PropTypesDefaultprops 
-            //Componente presentacional - Se limita a mostrarse en la interfaz.
+      {/** ----------- Clase 1.4 -------- */}
+          {/** 1) Creacion del proyecto npx create-react-app primer-proyecto */ }
+
+      {/** ----------- Clase 1.6 -------- */}
+          { /** 1) Comando npm start para levantar el proyecto */ }
+
+      {/** ----------- Clase 2.1 -------- */}
+          { /**  Comando para agregar dependencias npm add ed-grid adteam-style-guide node-sass
+          * estoy agregando esas 3 dependencias todo junto en una linea
+          * Direcciones utiles: https://ux.ed.team/ , https://ed-grid.com/ **/}
+    
+      {/** ----------- Clase 2.4 -------- */}
+          {/**
+          *  Reglas JSX
+          *  1: Todas las etiquetas deben cerrarse
+          *  2: Los componentes deben devolver un solo elemento padre
+          *  3: Apoyarse de los Fragmente <> </> cuando necesito devolver 2 elementos
+          *  4: Fragment => <> hijos </>
+          *  5: img siempre se cierra
+          *  6: class => className
+          *  7: for => htmlFor
+          */}
+     
+      {/** ----------- Clase 3.1 -------- */}
+          {/**
+          *  git status                --> Se fija el status
+          *  git add.                  --> agrega a git todo lo que esta en la carpeta
+          *  git commit -m ""          --> hace commit y agrega un mensaje en el commit
+          *  git push -u origin master --> lo sube al repositorio de internet
+          * 
+          * 1) Ir a https://github.com
+          * 2) Hacer click en el boton new dentro de la pagina de github completar lo que pide
+          * 3) aparece una pagin en donde dice lo siguiente para agregar un proyecto ya creado a github
+          *         push an existing repository from the comand line
+          *    git remote add origin git@github.com:xxxx/xxxx.git
+          *    git push -u origin master 
+          * cree el siguiente Proyecto --> https://github.com/sangello/primer-proyecto
+          */ }
+
+      {/** ----------- Clase 3.2 -------- */ }
+          {/** Expresiones Matematicas */}
+          <Curso />
+    
+      {/** ----------- Clase 3.4 -------- */ }  
+          {/** Imprimiento propiedades */}
+          <ImprimiendoPropiedades 
+            title="Nuevo Curso de React desde cero"
+            image="https://edteam-media.s3.amazonaws.com/specialities/original/56519662-7722-4e2e-958e-599a35ae4fb1.png"
+            price="15 usd" 
+          />
+        
+          <ImprimiendoPropiedades1 
+            title="Edicion Audiovisual"
+            image="https://edteam-media.s3.amazonaws.com/specialities/original/10322ac1-7b43-4e12-9000-0c28e04178d6.png"
             price="30 usd" 
-         />
-    {/** ----------- Clase 3.7 -------- */ }
+          />
+        
+      {/** ----------- Clase 3.5 -------- */ }  
+          {/** Componente presentacional - Se limita a mostrarse en la interfaz. */}
+          <ComponentePresentacionales/>
+   
+    
+      {/** ----------- Clase 3.6 -------- */ }
+          <PropTypesDefaultprops 
+            price="30 usd" 
+          />
+      
+      {/** ----------- Clase 3.7 -------- */ }
         {
           Cursos.map ( (c , index) => <RecorriendoArrays key={index} titulo={c.titulo} image={c.image} price={c.price}/> )
         }
-  
-    {/** ----------- Clase 4 -------- */ }
-        {/** Creando un componente de Clase*/}
-        <div className="l-section">
-            {//  <Formulario nombre="Juan jose" correo="Juan@gmail.com"/>
-            }
+        
+    </div>
+
+      {/** ----------- Clase 4 -------- */ }
+          {/** Creando un componente de Clase*/}
+          <div className="l-section">
+            {/** <Formulario nombre="Juan jose" correo="Juan@gmail.com"/>*/}
             <Formulario name="de Bienvenida"/>
-        </div>
-    {/** ----------- Clase 5 -------- */ }
+          </div>
+        
+      {/** ----------- Clase 5 -------- */ }
         <CourseGrid />
+    
+
+      {/** ----------- Clase 5.2 -------- */ }
+          {/** Se instala React router 
+           *  1- Se va a la carpeta del proyecto
+           *  2- npm add react-router-dom 
+           */}
+    
+
+      {/** ----------- Clase 5.3 -------- */ }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
-    {/** ----------- Clase 5.2 -------- */ }
-        {/** Se instala React router 
-         *  1- Se va a la carpeta del proyecto
-         *  2- npm add react-router-dom 
-         */}
-
-    {/** ----------- Clase 5.3 -------- */ }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
     </>
 );
   
