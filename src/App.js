@@ -11,7 +11,8 @@ import RecorriendoArrays from './Jsx/RecorriendoArrays';
 import Banner from './Jsx/Banner';
 import Formulario from './Jsx/Formulario';
 import CourseGrid from './Jsx/CourseGrid';
-import { BrowserRouter as Router , Route} from "react-router-dom"
+import Course from './Jsx/Course';
+import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 
 const Cursos = [
   { "title" : "Java Desde 0",
@@ -39,10 +40,21 @@ const App = () => (
            *    const App = () => ( ... )
            *        es lo mismo que 
            *    function App() { return ( ... );}
+           * ----------- Clase 5.4 - Declarando Router y Rutas-------- 
+           *  *) Se agrega switch para que no se repita la página 404 siempre
+           *  *) la linea <Route path="/cursos/:id" exact  component={Course}/> es para que entrando
+           *  a cada curso pueda ver su contenido.
+           * 
+           * ----------- Clase 5.5 - Parámetros de la ruta -------- 
+           *  *) La linea <Route path="/cursos/:id" exact  component={Course}/>, linea (path="/cursos/:id")
+           *  tiene parametros y se pone por arriba de la que no tiene parametros(path="/cursos")   
+           *  para que no renderize el componente CourseGrid porque es un switch y renderiza de arriba
+           *  para abajo.
            * 
            */}
-
+        <Switch>
           <Route path="/" exact  component={Banner}/>
+          <Route path="/cursos/:id" exact  component={Course}/>
           <Route path="/cursos" exact  component={CourseGrid}/>
           <Route path="/formulario" exact  component={ () => <Formulario name="Pagina de contacto"/> } />
           <Route component = { () => (
@@ -52,6 +64,7 @@ const App = () => (
               </div>
             )} 
           />
+        </Switch>
     </Router>
 
 )
