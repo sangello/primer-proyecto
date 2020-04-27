@@ -7,6 +7,7 @@ import Formulario from './Jsx/Formulario';
 import CourseGrid from './Jsx/CourseGrid';
 import Course from './Jsx/Course';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
+import MainMenu from './Jsx/MainMenu';
 
 const App = () => (
 
@@ -41,7 +42,11 @@ const App = () => (
            * <a href={`/cursos/${id}`}>
            *     <img src={image} alt={title} />
            * </a>
+           * ----------- Clase 5.8 - Menu con NavLink -------- 
+           *  Se agrega el componente MainMenu
+           * Componente NavLink, el atributo activeClassName cambia la clase a "activo" cuando esta activo
            */}
+        <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Banner}/>
           <Route path="/cursos/:id" exact  component={Course}/>
