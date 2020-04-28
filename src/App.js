@@ -47,10 +47,13 @@ const App = () => (
            *  Se agrega el componente MainMenu
            * Componente NavLink, el atributo activeClassName cambia la clase a "activo" cuando esta activo
            * 
-           *  ----------- Clase 5.9 --------
+           *  ----------- Clase 5.9 - Props de React Router (Match, location, history) --------
            * Se crea el componente Historial
-           * mach, location, history
+           * match, location, history
            * 
+           * ----------- Clase 6.1 - Atomic Design --------
+           * https://bradfrost.com/blog/post/atomic-web-design/
+           * Atoms, Molecules, Organisms, Templates,Pages
            */}
         <MainMenu />   
         <Switch>
