@@ -8,6 +8,7 @@ import CourseGrid from './Jsx/CourseGrid';
 import Course from './Jsx/Course';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 import MainMenu from './Jsx/MainMenu';
+import Historial from './Jsx/Historial';
 
 const App = () => (
 
@@ -45,12 +46,19 @@ const App = () => (
            * ----------- Clase 5.8 - Menu con NavLink -------- 
            *  Se agrega el componente MainMenu
            * Componente NavLink, el atributo activeClassName cambia la clase a "activo" cuando esta activo
+           * 
+           *  ----------- Clase 5.9 --------
+           * Se crea el componente Historial
+           * mach, location, history
+           * 
            */}
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Banner}/>
           <Route path="/cursos/:id" exact  component={Course}/>
           <Route path="/cursos" exact  component={CourseGrid}/>
+          <Route path="/historial" exact  component={Historial}/>
+          <Route path="/historial/:valor" exact  component={Historial}/>
           <Route path="/formulario" exact  component={ () => <Formulario name="Pagina de contacto"/> } />
           <Route component = { () => (
               <div className="ed-grid">Q
