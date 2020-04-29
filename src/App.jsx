@@ -55,7 +55,7 @@ const App = () => (
            * https://bradfrost.com/blog/post/atomic-web-design/
            * Atoms, Molecules, Organisms, Templates,Pages
            * 
-           * ------------ Clase 6.2 --------------
+           * ------------ Clase 6.2 - Refactorizando código I --------------
            * Se reestructura el codigo
            * - Elimina app.test.js que no lo estamos utilizando
            * - Se renombra App.js por App.jsx para que todos los componentes tengan la misma estructura
@@ -65,13 +65,15 @@ const App = () => (
            * - Poner toda la nomenclatura de los componentes en ingles.
            * - Renombramos el componentes Curso por CourseCard
            * 
-           * ------------ Clase 6.3 --------------
+           * ------------ Clase 6.3 - Refactorizando código II --------------
            * Opcion de orden de carpetas dentro del codigo.
            * - opcion1: Agrupar por funcionalidad 
            * -  src/Course/CoursePage.jsx
            * -  src/Course/CourseCard.jsx
            * -  src/Course/CourseGrid.jsx
            * - opcion2: Agruparlo segun Metodología Atomic Desing
+           * -  src/Components
+           *          Atoms, Molecules, Organisims, Templates, Pages
            */}
         <MainMenu />   
         <Switch>
