@@ -41,7 +41,7 @@ function App() {
           { /** 1) Comando npm start para levantar el proyecto */ }
 
       {/** ----------- Clase 2.1 -------- */}
-          { /**  Comando para agregar dependencias npm add ed-grid adteam-style-guide node-sass
+          { /**  Comando para agregar dependencias npm add ed-grid edteam-style-guides node-sass
           * estoy agregando esas 3 dependencias todo junto en una linea
           * Direcciones utiles: https://ux.ed.team/ , https://ed-grid.com/ **/}
     
