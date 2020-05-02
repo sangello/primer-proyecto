@@ -11,7 +11,7 @@ const MainMenu = () => (
                     <img className="main-logo" src="https://ed.team/static/images/logo.svg" alt="Logo EDteam" />
                 </a>
             </div>
-            <div class="s-grid-1 lg-cols-3 s-cross-center s-main-end header-Links">
+            <div className="s-grid-1 lg-cols-3 s-cross-center s-main-end header-Links">
                 <nav className="main-menu" id="main-menu">
                     <ul>
                         <li><NavLink exact to="/" activeClassName="activo">Inicio</NavLink></li>

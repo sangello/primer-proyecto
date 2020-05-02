@@ -22,17 +22,26 @@ class Formulario extends Component {
         this.cambiarFecha = this.cambiarFecha.bind(this)
     }
 
+    //Metodo cambiar nombre --> se lo llama desde --> 2da Forma de hacerlo*/
     cambiarNombre (e) {
         this.setState({
             nombre: e.target.value
         })
     }
-
+    //Metodo cambiarFecha --> se utiliza para la clase 4.8 ciclo de desmontaje
+    /** 2da forma de hacerlo */
+    cambiarFecha (e) {
+       
+        this.setState({
+            fecha:  Math.ceil(new Date()/1000)
+        })
+    }
+    /** 1da Forma de hacerlo
     cambiarFecha (e) {
         this.setState({
             fecha: new Date()
         })
-    }
+    } */
 
     //2 -- El Render es el Segundo Metodo que se ejecuta --> Se renderiza
     render(){
@@ -41,7 +50,11 @@ class Formulario extends Component {
 
         <div className="ed-grid">
             <h1>Formulario {this.props.name}</h1>
-        <h4>Fecha Actual: {Math.ceil(this.state.fecha/1000)}</h4>
+            {/** 2da Forma de hacerlo */}
+            {/**<h4> {`Fecha Actual: ${this.state.fecha}`}</h4>*/}
+            <h4> Fecha Actual: {JSON.stringify(this.state.fecha)}</h4>
+            {/** 1da Forma de hacerlo*/}
+            {/** <h4>Fecha Actual: {Math.ceil(this.state.fecha/1000)}</h4>*/}
             <form action=""  id="elemento">
                 <div className="ed-grid m-grid-2">
                     <div className="form__item">
@@ -73,12 +86,12 @@ class Formulario extends Component {
         )
     }
 
-    //3 -- El componentDidMount (Componente montado) es el Tercer Metodo que se ejecuta. Ya estas seguro que el render
-    // esta en el DOM y ya puedo manipular los elementos.
+    //3 -- El componentDidMount (Componente montado) es el Tercer Metodo que se ejecuta. Ya estas
+    // seguro que el render esta en el DOM y ya puedo manipular los elementos.
     componentDidMount (){
-        let elemento = document.getElementById("elemento")
-        console.log(elemento)
-
+        //let elemento = document.getElementById("elemento")
+        //console.log(elemento)
+        
         this.intervaloFecha = setInterval(() => {
             this.cambiarFecha()
             console.log(new Date())
@@ -96,8 +109,8 @@ class Formulario extends Component {
     //podemos acceder a la informacion y estado que tenian antes de actualizarse con las
     // propiedades revProps y prevState
     componentDidUpdate (prevProps, prevState){
-        console.log(prevProps)
-        console.log(prevState)
+        console.log("prevPros: "+JSON.stringify(prevProps))
+        console.log("prevState: "+JSON.stringify(prevState))
         console.log("-----------------")
 
     }
